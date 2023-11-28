@@ -3,6 +3,7 @@ require('packer').startup(function(use)
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', requires = { { 'nvim-lua/plenary.nvim' } } }
     use({ 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate", })
     use {
+        "rebelot/kanagawa.nvim", 
         "stevearc/conform.nvim",
         'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope-fzy-native.nvim',
