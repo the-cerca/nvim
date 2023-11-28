@@ -5,3 +5,11 @@ keymap.set('n', '<leader><space>', builtin.find_files, {})
 keymap.set('n', '<leader>fg', builtin.live_grep, {})
 keymap.set('n', '<leader>fb', builtin.buffers, {})
 keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+
+keymap.set("n", "<Tab>", "<C-w><C-w>", opts)
+keymap.set("n", "vp", ":vsp<CR>", opts)
+keymap.set("n", "qa", ":wqa<CR>", opts)
+keymap.set("v", "cc", '"+y', opts)
+keymap.set("n", "nn", ":Format<CR>", opts)
+keymap.set("n", "q", ":q", opts)
