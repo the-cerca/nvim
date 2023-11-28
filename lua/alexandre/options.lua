@@ -1,0 +1,1 @@
+vim.g.completopt = "menu, noselect, menuone, noinsert"
