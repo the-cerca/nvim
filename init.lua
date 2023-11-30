@@ -6,4 +6,5 @@ require("alexandre.cmp")
 require("alexandre.lspconfig")
 require("alexandre.command")
 require("alexandre.themes")
-
+require("alexandre.luacheck")
+require("alexandre.lualine")
