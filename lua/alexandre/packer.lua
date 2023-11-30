@@ -2,11 +2,16 @@ require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.4", requires = { { "nvim-lua/plenary.nvim" } } })
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use ({'folke/noice.nvim',requires = {"MunifTanjim/nui.nvim","rcarriga/nvim-notify"}})
 	use({
+		'rcarriga/nvim-notify',
 		"m4xshen/autoclose.nvim",
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+		------themes -----------
+		"olivercederborg/poimandres.nvim",
 		"rebelot/kanagawa.nvim",
+		--- end themes -----
 		"stevearc/conform.nvim",
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-fzy-native.nvim",
