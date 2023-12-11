@@ -70,4 +70,34 @@ require("lspconfig").gopls.setup({
 			gofumpt = true,
 		},
 	},
+	on_attach = function(client, bufnr)
+		-- Organiser les imports lors de la sauvegarde du fichier
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			pattern = { "*.go" },
+			callback = function()
+				-- Cette fonction est appelée avant d'enregistrer le fichier Go
+				local params = vim.lsp.util.make_range_params()
+				params.context = { only = { "source.organizeImports" } }
+
+				-- Perform the request for organizing imports
+				local result = vim.lsp.buf_request_sync(bufnr, "textDocument/codeAction", params, 1000)
+				for _, res in pairs(result or {}) do
+					for _, action in pairs(res.result or {}) do
+						if action.edit or (action.command and type(action.command) == "table") then
+							if action.edit then
+								vim.lsp.util.apply_workspace_edit(action.edit)
+							end
+							if action.command then
+								local command = action.command
+								if type(command) == "table" and command.command then
+									command = command.command
+								end
+								vim.lsp.buf.execute_command(command)
+							end
+						end
+					end
+				end
+			end,
+		})
+	end,
 })

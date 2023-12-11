@@ -5,7 +5,15 @@ keymap.set("n", "<leader><space>", builtin.find_files, {})
 keymap.set("n", "<leader>fg", builtin.live_grep, {})
 keymap.set("n", "<leader>fb", builtin.buffers, {})
 keymap.set("n", "<leader>fh", builtin.help_tags, {})
+----------------lsp---------------------
+vim.api.nvim_set_keymap(
+	"n",
+	"<MiddleMouse>",
+	"<cmd>lua vim.lsp.buf.definition()<CR>",
+	{ noremap = true, silent = true }
+)
 
+--------------- lsp ---------------------
 local opts = { noremap = true, silent = true }
 keymap.set("n", "<Tab>", "<C-w><C-w>", opts)
 keymap.set("n", "vp", ":vsp<CR>", opts)

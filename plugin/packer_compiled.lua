@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/alexandredesir/.local/share/nvim/site/pack/packer/start/conform.nvim",
     url = "https://github.com/stevearc/conform.nvim"
   },
+  ["dracula.nvim"] = {
+    loaded = true,
+    path = "/Users/alexandredesir/.local/share/nvim/site/pack/packer/start/dracula.nvim",
+    url = "https://github.com/Mofiqul/dracula.nvim"
+  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/Users/alexandredesir/.local/share/nvim/site/pack/packer/start/formatter.nvim",
@@ -143,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/alexandredesir/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/Users/alexandredesir/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
   },
   ["neodev.nvim"] = {
     loaded = true,
