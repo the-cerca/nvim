@@ -1,17 +1,16 @@
 --require("kanagawa").setup({
---	transparent = true,
+--  transparent = true,
 --})
 --vim.cmd("colorscheme kanagawa-wave")
---require("poimandres").setup({
---	disable_background = true,
---})
---vim.cmd("colorscheme poimandres")
+-- require("poimandres").setup({
+-- 	disable_background = true,
+-- })
+-- vim.cmd("colorscheme poimandres")
 
-
-require('dracula').setup({
-	transparent_bg = true,
+require("dracula").setup({
+  transparent_bg = true,
 })
-vim.cmd[[colorscheme dracula]]
+vim.cmd([[colorscheme dracula]])
 -- or
 
 -- require("material").setup({
